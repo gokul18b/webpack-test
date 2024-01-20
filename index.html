@@ -31,8 +31,11 @@
           <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Support</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Contact Us</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">Contact</a> </li>
-          <li class="nav-item"><button class="rounded-button">Login</button></li>
-          <li class="nav-item"><button class="rounded-button">Sign Up</button></li>
+          <li class="nav-item"><button id="btn_login" class="rounded-button" data-toggle="modal"
+              data-target="#loginModal">Login</button></li>
+          <li class="nav-item"><button id="btn_signup" class="rounded-button" data-toggle="modal"
+              data-target="#signupModal">Sign
+              Up</button></li>
         </ul>
       </div>
     </div>
@@ -345,7 +348,62 @@
 
   <!-------Download End------->
 
+  <!-- Login Modal Start -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Mobile Number / Username">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Login Modal End -->
 
+  <!-- Signup Modal Start -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Sign Up For New StatEc Account Registarion</label>
+            <input type="number" class="form-control" max="10" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter your 10 Digit Mobile">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Signup Modal End -->
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -356,6 +414,8 @@
   <!-- scrollIt js -->
   <script src="js/scrollIt.min.js"></script>
   <script src="js/wow.min.js"></script>
+
+  <script src="src/js/index.js"></script>
   <script>
     wow = new WOW();
     wow.init();
