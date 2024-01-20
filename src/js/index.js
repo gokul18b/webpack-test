@@ -1,17 +1,5 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/main.css">
-  <title>Webpack HTML CSS</title>
-  <!-- <script src="./js/index.min.js"></script> -->
-</head>
-<body>
-  <h1>Hello Webpack!</h1>
-  <button onclick="test()">Login</button>
-</body>
-<script>
-  function test(){
+
+function test(){
     const apiUrl = 'https://jsonplaceholder.typicode.com/todos/1';
 
 // Using the fetch function to make a GET request
@@ -35,5 +23,3 @@
     });
     // window.location.href = 'test.html'
 }
-</script>
-</html>
