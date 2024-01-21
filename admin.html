@@ -66,117 +66,7 @@
                 </div>
                 <!-- sidebar-search  -->
                 <div class="sidebar-menu">
-                    <ul>
-                        <li class="header-menu">
-                            <span>General</span>
-                        </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fa fa-tachometer-alt"></i>
-                                <span>Dashboard</span>
-                                <span class="badge badge-pill badge-warning">New</span>
-                            </a>
-
-                        </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>Recharge</span>
-                                <span class="badge badge-pill badge-danger">3</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">Auto</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Mobile</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Games</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Voucher</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">DTH</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Wallet Topup</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="far fa-gem"></i>
-                                <span>Bill Payment</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">All in One BBPS</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Credit Card Payments</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Mobile</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Broadband</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Electricity</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fa fa-chart-line"></i>
-                                <span>Money Transfer</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">tMoney</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">iMoney</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">eMoney</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Mini ATM</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="header-menu">
-                            <span>Extra</span>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-book"></i>
-                                <span>Reports</span>
-                                <span class="badge badge-pill badge-primary">Beta</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-calendar"></i>
-                                <span>Daily Reports</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-folder"></i>
-                                <span>New Reports</span>
-                            </a>
-                        </li>
+                    <ul id="sideNav_content">
                     </ul>
                 </div>
                 <!-- sidebar-menu  -->
@@ -204,11 +94,16 @@
         <main class="page-content">
             <div class="container-fluid">
                 <div class="float-right">
-                    <button type="button" class="btn btn-light "><span class="glyphicon glyphicon-log-out"></span>Logout</button>
+                    <button type="button" class="btn btn-light "><span
+                            class="glyphicon glyphicon-log-out"></span>Logout</button>
                 </div>
-                
+
                 <div class="row">
-                    <hr>
+
+                    <div id="content">
+
+                        <iframe id="iframe" width="100%" height="600px" frameborder="0"></iframe>
+                    </div>
                 </div>
                 <hr>
 
@@ -226,7 +121,17 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="./js/sidenav.js"></script>
+    <script src="./navigation.js"></script>
+    <script>
 
+
+        $("#sideNav_content").html(this.loadSideNavigation())
+        function loadContent(page) {
+            document.getElementById('iframe').src = page;
+        }
+
+
+    </script>
 </body>
 
 </html>
