@@ -31,7 +31,7 @@
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <div class="sidebar-brand">
-                    <a href="#">Star</a>
+                    <a href="#">Applight</a>
                     <div id="close-sidebar">
                         <i class="fas fa-times"></i>
                     </div>
@@ -94,7 +94,7 @@
         <main class="page-content">
             <div class="container-fluid">
                 <div class="float-right">
-                    <button id="btn_logout" type="button" class="btn btn-light "><span
+                    <button id="btn_logout" type="button" class="btn btn btn-info "><span
                             class="glyphicon glyphicon-log-out"></span>Logout</button>
                 </div>
 
@@ -122,16 +122,8 @@
         crossorigin="anonymous"></script>
     <script src="./js/sidenav.js"></script>
     <script src="./navigation.js"></script>
-    <script>
-
-
-        $("#sideNav_content").html(this.loadSideNavigation())
-        function loadContent(page) {
-            document.getElementById('iframe').src = page;
-        }
-
-
-    </script>
+    <script src="./src/js/admin/admin.js"></script>
+    
 </body>
 
 </html>

@@ -1,8 +1,11 @@
-$(document).ready(function (e) {
 
-    document.getElementById('iframe_sidenav').src = 'sidenav.html';
 
-    $("#btn_logout").click(function(){
-        window.location.href = 'index.html';
-    })
-});
+$("#sideNav_content").html(loadSideNavigation())
+
+function loadContent(page) {
+    document.getElementById('iframe').src = page;
+}
+
+$("#btn_logout").click(function () {
+    window.location.href = 'index.html';
+})
